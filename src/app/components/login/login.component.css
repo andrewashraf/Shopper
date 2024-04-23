@@ -1,0 +1,162 @@
+.login-form h2, .signup-form h2 {
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+  
+  
+  .login-form form input, .signup-form form input {
+    background: #F0F0E9;
+    border: medium none;
+    color: #696763;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    height: 40px;
+    margin-bottom: 10px;
+    outline: medium none;
+    padding-left: 10px;
+    width: 100%;
+  }
+  
+  .login-form form span{
+    line-height: 25px;
+  }
+  
+  .login-form form span input {
+    width: 15px;
+    float: left;
+    height: 28px;
+    margin-right: 5px;
+  }
+  
+  .login-form form button {
+    margin-top: 23px;
+  }
+  
+  .login-form form button, .signup-form form button {
+    background: #FE980F;
+    border: medium none;
+    border-radius: 0;
+    color: #FFFFFF;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    padding: 6px 25px;
+  }
+  
+  .login-form label input {
+    border: medium none;
+    display: inline-block;
+    height: 0;
+    margin-bottom: 0;
+    outline: medium none;
+    padding-left: 0;
+  }
+
+  .or{
+	background: #FE980F;
+	border-radius: 40px;
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
+	height: 50px;
+	line-height: 50px;
+	margin-top: 75px;
+	text-align: center;
+	width: 50px;
+  margin-left: 20px;
+}
+
+.loginpage{
+    /* display: block;
+    margin-bottom: 185px;
+    margin-top: 185px;
+    overflow: hidden; */
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    margin: 40px 0;
+}
+
+/* chart css */
+.chart-container {
+  width: 400px; /* Set the desired width */
+  height: 300px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 10px; /* Add padding inside the chart container */
+  border: 1px solid #ccc; /* Add a 1px solid border with a light gray color */
+  background-color: #FE980F !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+#worldwide-sales {
+  background-color: #fff !important; /* Set a white background color for the chart */
+}
+
+/* Add more specific selectors for the chart elements */
+:root {
+  --chart-background-color: rgba(255, 0, 0, 0.904);
+  --chart-border-color: rgb(255, 0, 0);
+}
+
+.first-chart{
+  width: 450px; /* Set the desired width */
+  height: 250px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 20px; /* Add padding inside the chart container */
+  border: 1px solid #dfdfdf; /* Add a 1px s  olid border with a light gray color */
+  background-color: #fcfcfc !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.second-chart{
+  width: 450px; /* Set the desired width */
+  height: 250px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 20px; /* Add padding inside the chart container */
+  border: 1px solid #dfdfdf; /* Add a 1px s  olid border with a light gray color */
+  background-color: #fcfcfc !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.third-chart{
+  width: 350px; /* Set the desired width */
+  height: 350px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 20px; /* Add padding inside the chart container */
+  border: 1px solid #dfdfdf; /* Add a 1px s  olid border with a light gray color */
+  background-color: #fcfcfc !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.fourth-chart{
+  width: 350px; /* Set the desired width */
+  height: 350px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 20px; /* Add padding inside the chart container */
+  border: 1px solid #dfdfdf; /* Add a 1px s  olid border with a light gray color */
+  background-color: #fcfcfc !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.fifth-chart{
+  width: 600px; /* Set the desired width */
+  height: 350px; /* Set the desired height */
+  margin: 20px; /* Add margin around the chart */
+  padding: 20px; /* Add padding inside the chart container */
+  border: 1px solid #dfdfdf; /* Add a 1px s  olid border with a light gray color */
+  background-color: #fcfcfc !important; /* Set a light gray background color for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+.first-row{
+  display: flex;
+  justify-content: center;
+}
+.second-row{
+  display: flex;
+  justify-content: center;
+}
+.third-row{
+  display: flex;
+  justify-content: center;
+}
+

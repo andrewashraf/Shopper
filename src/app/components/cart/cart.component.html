@@ -1,0 +1,26 @@
+<ngx-spinner type="ball-scale-multiple" [color]="'#FE980F'" [size]="'large'"></ngx-spinner>
+
+<div class="container">
+  <h3 class="selected-products-heading"style="color: #696763;">Selected Cart Products: 
+    <span style="color: #FE980F;">{{ selectedProduct.length }}</span>
+  </h3>
+  <div class="row">
+    <div class="col-sm-2" *ngFor="let product of selectedProduct">
+      <div class="card mb-3">
+        <img src="../../../assets/Images/shop_03.jpg" alt="" class="card-img-top img-cart" />
+        <div class="card-body">
+          <h4 class="card-title">{{ product.title }}</h4>
+          <h3 class="card-text">Price: {{ product.Price | currency }}</h3>
+          <button class="btn btn-danger delete-button" (click)="removeFromCart(product)">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="total-price-heading mt-4" style="color: #696763;">
+    Total Price to Pay:
+    <span style="color: #FE980F;">{{ ' ' + totalPrice | currency }}</span>
+  </h3>
+   
+</div>
+
+<app-footer></app-footer>

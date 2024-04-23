@@ -1,0 +1,181 @@
+
+<div class="la-ball-scale-multiple">
+  <ngx-spinner type="ball-scale-multiple" [color]="'#FE980F'" [size]="'large'"></ngx-spinner>
+	<div></div>
+	<div></div>
+	<div></div>
+</div>
+
+
+<app-header (toggleSidebar)="onToggleSidebar()"></app-header>
+
+
+<div class="home-page-container" [class.with-sidebar]="isSidebarOpen" >
+  <app-sidebar style="width: 25%;" *ngIf="isSidebarOpen"></app-sidebar>
+  
+  <!-- Main content -->
+  <div class="main-content">
+
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" 
+                  [class.active]="sliderIndex === 0"
+                  (click)="sliderIndex = 0"></button>
+          <button type="button" 
+                  [class.active]="sliderIndex === 1"
+                  (click)="sliderIndex = 1"></button>
+          <button type="button" 
+                  [class.active]="sliderIndex === 2"
+                  (click)="sliderIndex = 2"></button>
+      </div>
+        <div class="carousel-inner" [@slideAnimation]="sliderIndex">
+            <div class="carousel-item" [class.active]="sliderIndex == 0">
+                <!-- Slide 1 Content -->
+                <div class="row" style="margin: 0 40px;">
+                    <div class="col-sm-6">
+                        <h1><span style="color: #fe980f">E</span>-SHOPPER</h1>
+                        <h2 class="h2-eshopper">Free E-Commerce Template</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <button type="button" class="btnColor">Get it now</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../../../assets/Images/girl1.jpg" class="girl-img-responsive" alt="" />
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" [class.active]="sliderIndex == 1">
+                <!-- Slide 2 Content -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1><span style="color: #fe980f">E</span>-SHOPPER</h1>
+                        <h2 class="h2-eshopper">Free E-Commerce Template</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <button type="button" class="btnColor">Get it now</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../../../assets/Images/girl2.jpg" class="girl-img-responsive" alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item" [class.active]="sliderIndex == 2">
+                <!-- Slide 3 Content -->
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1><span style="color: #fe980f">E</span>-SHOPPER</h1>
+                        <h2 class="h2-eshopper">Free E-Commerce Template</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
+                        <button type="button" class="btnColor">Get it now</button>
+                    </div>
+                    <div class="col-sm-6">
+                        <img src="../../../assets/Images/girl3.jpg" class="girl-img-responsive" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" (click)="prevSlide()">
+            <!-- <span class="carousel-control-prev-icon"><i class="fa-solid fa-chevron-left"></i></span> -->
+        </button>
+        <button class="carousel-control-next" type="button" (click)="nextSlide()">
+            <!-- <span class="carousel-control-next-icon"><i class="fa-solid fa-chevron-right"></i></span> -->
+        </button>
+    </div>
+  </div>
+
+  
+  
+      
+
+   
+
+     
+           
+          
+          <!--          -->
+      
+          
+
+            <app-features-items></app-features-items>
+           
+            <!--features_items-->
+
+            <!--category-tab-->
+            <!-- recommended item -->
+            <app-category-tabs></app-category-tabs>
+            <app-recommended-item></app-recommended-item>
+            
+        
+          
+    <!-- Include modal component -->
+  
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="editProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Edit</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="ChangeProduct()">
+          <div class="form-group">
+            <label for="price">Price :</label>
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="OneProduct.Price" required>
+          </div>
+          <div class="form-group">
+            <label for="Category">Category :</label>
+            <input type="text" class="form-control" id="Category" name="category" [(ngModel)]="OneProduct.Category" required>
+          </div>
+          <div class="form-group">
+            <label for="title">Title :</label>
+            <input type="text" class="form-control" id="title" name="title" [(ngModel)]="OneProduct.title" required>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-btn-primary"data-bs-dismiss="modal">Save</button>
+            </div>  
+          </form>
+      
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="addProduct" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Add Product</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <app-add-product-modal  (addProduct)="onAddProduct($event)"></app-add-product-modal>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<button *ngIf="showBackToTopButton"
+        [ngClass]="{'fade-in': showBackToTopButton, 'fade-out': !showBackToTopButton}"
+        class="btn btn-primary back-to-top"
+        (click)="scrollToTop()">
+  <i class="fas fa-arrow-up"></i> </button>
+
+</div>
+</div>
+

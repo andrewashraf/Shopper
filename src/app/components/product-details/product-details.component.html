@@ -1,0 +1,8 @@
+<p>product-details works!</p>
+
+
+<div class="btn-group" role="group" aria-label="Basic example">
+    <button [disabled]="CurrPrdID==prdIDsArr[0]" type="button" class="btn btn-primary">Previous</button>
+    <button type="button" class="btn btn-primary"(click)="goBack()">Back</button>
+    <button [disabled]="CurrPrdID==prdIDsArr[prdIDsArr.length-1]" type="button" class="btn btn-primary">Next</button>
+  </div>

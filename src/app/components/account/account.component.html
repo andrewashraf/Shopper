@@ -1,0 +1,110 @@
+
+
+<div class="div">
+    <p-button 
+    (click)="showAddModal()"
+     label="Add"
+      styleClass="p-button-text"
+      
+      ></p-button>
+</div>
+
+<p-dialog header="Header" 
+[(visible)]="DisplayAddModal" 
+[style]="{width: '50vw'}" 
+[modal]="true"
+[draggable]="false"
+[resizable]="false"
+>
+    <p class="m-0">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</p-dialog>
+
+<div class="flex flex-column align-items-center justify-content-center">
+    <p-card header="Todo: data from 'https://jsonplaceholder.typicode.com/todos'" class="w-7">
+        <!-- <div class="m-2 flex">
+            <div>
+            <input type="text" pInputText [(ngModel)]="task" placeholder="enter new Todo" #todoTask="ngModel" required/>
+            </div>
+            <p-button icon="pi pi-check" class="m1-1" [disabled]="!!todoTask.invalid"
+            (onclick)="addTodo()"></p-button>
+        </div> -->
+        <p-table [value]="todos" [paginator]="true" [rows]="5">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>id</th>
+                    <th>user id</th>
+                    <th>Task</th>
+                    <th>Completed</th>
+                    <th>delete</th>
+                    
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-todo let-i="rowIndex">
+                <tr>
+                    
+                    <td>{{ todo.id }}</td>
+                    <td>{{ todo.userId }}</td>
+                    <td>{{ todo.title }}</td>
+                    <td>
+                        <p-checkbox 
+                            [(ngModel)]="todo.completed"
+                            [binary]="true"
+                            (ngModelChange)="updateTodo($event, i)"
+                        ></p-checkbox>
+                    </td>
+                    <td>
+                        <p-button icon="pi pi-trash" (click)="deleteTodo(i)"></p-button>
+                    </td>
+                    
+                </tr>
+            </ng-template>
+ 
+        </p-table>
+    </p-card>
+</div>
+<br>
+<br>
+
+<h1 style="margin-left:500px;"> products in card view</h1>
+<!-- display products -->
+<div class="row">
+<div class="col-sm-4" *ngFor="let product of products ; let i = index"  >
+    <div class="product-image-wrapper">
+      <div class="single-products">
+        <div class="productinfo text-center">
+          <img src="../../../assets/Images/product4.jpg" alt="" />
+          <h2>{{product.Price |currency}}</h2>
+          <p>{{product.title}}</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+            
+<div class="flex flex-column align-items-center justify-content-center">
+    <p-card header="products in table view in pages" class="w-6">
+
+        <p-table [value]="products" [paginator]="true" [rows]="5">
+            <ng-template pTemplate="header">
+                <tr>
+                    <th>Price</th>
+                    <th>Title</th>
+                    <th>Photo</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-product let-i="rowIndex">
+                <tr>
+                    <td>{{product.Price |currency}}</td>
+                    <td>{{ product.title }}</td>
+                    <td><img src='../../../assets/Images/product6.jpg' width="80px"></td>
+                </tr>
+            </ng-template>
+ 
+        </p-table>
+    </p-card>
+</div>

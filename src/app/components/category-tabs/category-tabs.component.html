@@ -1,0 +1,31 @@
+<div class="container">
+<div class="category-tab">
+ 
+    <ul class="nav-tabs">
+      <li *ngFor="let group of groups" [ngClass]="{ 'active': activeGroupId === group.id }">
+        <a href="javascript:void(0)" (click)="showGroup(group.id)">{{ group.id }}</a>
+      </li>
+    </ul>
+    <div class="tab-content">
+      <div *ngFor="let group of groups" [id]="group.id" class="group" [@tabAnimation]="isActiveGroup(group.id)" [hidden]="activeGroupId !== group.id">
+          <div class="row">
+              <div class="col-sm-3" *ngFor="let product of group.products">
+                  <div class="product-image-wrapper">
+                      <div class="single-products">
+                          <div class="productinfo text-center">
+                              <img [src]="product.imageUrl" alt="{{ product.name }}" class="imgfortab" />
+                              <h2>{{ product.price }}</h2>
+                              <p>{{ product.name }}</p>
+                              <a href="#" class="btn btn-default add-to-cart">
+                                  <i class="fa fa-shopping-cart"></i>Add to cart
+                              </a>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+</div>

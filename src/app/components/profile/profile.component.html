@@ -1,0 +1,20 @@
+<div class="container">
+<div class="profile">
+  <div class="profile-picture-container">
+    <label for="profile-picture" class="profile-picture" [ngClass]="{'has-image': profileImage}">
+      <input type="file" id="profile-picture" accept="image/*" (change)="onFileSelected($event)">
+      <img [src]="profileImage || 'https://via.placeholder.com/250'" alt="Profile Picture">
+      <span *ngIf="!profileImage" class="upload-text">Upload Photo</span>
+      <button class="upload-button" #uploadButton (click)="fileInput.click()">Upload</button>
+    </label>
+    <input type="file" #fileInput style="display: none;">
+    <button class="edit-button" (click)="editProfilePhoto()">Edit</button>
+  </div>  
+  <div class="profile-details">
+    <h2>John Doe</h2>
+    <p>Email: johndoeatexample.com</p>
+    <p>Phone: +1234567890</p>
+    <p>Address: 123 Main St, City, Country</p>
+  </div>
+</div>
+</div>

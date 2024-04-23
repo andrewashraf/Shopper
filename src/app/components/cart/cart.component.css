@@ -1,0 +1,88 @@
+
+  h3 , h4 {
+    color : #696763;
+  }
+  .cart-item {
+    width: calc(25% - 20px); /* Adjust width to fit at least 4 items in a row */
+    margin-bottom: 20px;
+  }
+  
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .delete-button {
+    background-color: #FE980F;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #a3620d;
+  }
+
+  
+  .img-cart{
+    width: 200px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 10px;
+  }
+  
+  .cart-item {
+    width: 100%; /* Occupy full width of parent */
+  }
+  
+  .img-cart {
+    width: 100%; /* Ensure the image occupies full width of its container */
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 10px;
+  }
+  
+  .delete-button {
+    width: 100%; /* Make the button occupy full width of its container */
+    background-color: #FE980F;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #a3620d;
+  }
+  .selected-products-heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .total-price-heading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  .delete-button {
+    background-color: #FE980F;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #a3620d;
+  }
+  
+  .img-cart {
+    width: 200px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.10);
+    margin-bottom: 10px;
+  }
+ 
+   totalPrice {
+    color: #FE980F;
+  }

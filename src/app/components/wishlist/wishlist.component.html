@@ -1,0 +1,86 @@
+
+    <section class="col-10">
+
+        <img src="{{storeInfo.imgURL}}" *ngIf="isImageShow" alt="imgg" Lightbox="red" DefualtColor="pink">
+        <button class="btn btn-secondary" (click)="toggleImage()"> toggle Image </button>
+        <br>
+ 
+
+      
+<!-- <button class="btn btn-secondary" (click)="changeCat()">Change Category</button> -->
+
+        <!-- <div class="text-secondary">
+            [to be removed] for test
+            {{selectedCatID}}
+        </div> -->
+        <tr>
+          <td *ngFor="let item of storeInfo.id" Lightbox="red" DefualtColor="pink">{{item}}</td>
+          <tr>  
+          <td *ngFor="let item of storeInfo.price" Lightbox="red" DefualtColor="pink">Price in USD: {{item | currency:'USD':'symbol' }} </td>
+        </tr>
+        <tr>  
+          <td *ngFor="let item of storeInfo.price" Lightbox="red" DefualtColor="pink">Price in EGP: {{item |USDtoEGP| currency:'EGP':'code' }} </td>
+        </tr>
+<br>
+<br>
+<div class="productDesign" style="background-color:aliceblue;">
+<table>
+  <thead>
+  <td class="id">id</td>
+  <td class="name">name</td>
+  <td class="quantity">quantity</td>
+  <td class="price">price in USD</td>
+  <td >image</td>
+  <td class="count">count</td>
+  <td class="details">details</td>
+  <td class="buy">add to card</td>
+  </thead>
+  <tbody>
+<!-- momken n3'yar prdlist be prdlistOfCat -->
+ <tr *ngFor="let prd of prdlistOfCat let i=index" >   
+    <td  Lightbox="red" DefualtColor="pink">{{prd.id}}</td>
+    <td  Lightbox="red" DefualtColor="pink">{{prd.name}}</td>
+    <td  Lightbox="red" DefualtColor="pink">
+       <ng-container [ngSwitch]="prd.quantity">
+         <div *ngSwitchCase="0">Out of stock</div>
+         <div *ngSwitchCase="1">Last item!</div>
+         <div *ngSwitchCase="2">Last 2 items!</div>
+         <div *ngSwitchDefault>{{prd.quantity}}</div>
+        </ng-container>
+    </td>
+    <td  Lightbox="red" DefualtColor="pink">{{prd.price| currency}}</td>
+    <td><img [src]="prd.imgURL" alt="imggg" class="image"></td>
+    <td><input #itemCount class="form-control" type="number"></td>
+  <!-- <td><button type="button" class="btn btn-secondary" (click)="openPrdDetails(prd.id)">details</button></td> -->
+   <!-- //fe tare2a tanya fo2ha -->
+  <td><button class="btn btn-success" [routerLink]="['/Wishlist',prd.id]" routerLinkActive="router-link-active">details</button></td>
+  <td><button type="button" class="btn btn-secondary" (click)="buy(prd.price,itemCount.valueAsNumber)">add to card</button></td>
+
+</tr>
+  </tbody>
+</table>
+<hr>
+
+<!-- <h4 class="text-danger">
+  to be removed for test <br> 
+  Order total price: {{orderTotalPrice}} </h4> -->
+
+<br>
+ {{OrderDate| date:"short"}}
+</div>
+
+
+
+    </section>
+
+
+
+<div class="adsview" *ngFor="let ad of ads">
+  {{ ad }}
+</div>
+
+<div class="yourName">
+  <h3>Enter Your Name: </h3>
+  <input #clientNameInp type="text" class="form-control">
+</div>
+

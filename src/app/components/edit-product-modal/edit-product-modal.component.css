@@ -1,0 +1,43 @@
+.edit-product-header h3 {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: abel;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #B4B1AB;
+  }
+  
+  .edit-product-form .form-group {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-family: abel;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #B4B1AB;
+  }
+  
+  .btn-primary {
+    background: #FE980F !important;
+    border: 0 none;
+    border-radius: 9px;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 6px 15px;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+  }
+  
+  .modal-footer {
+    padding: 10px;
+    justify-content: space-between;
+  }
+  

@@ -1,0 +1,151 @@
+<div class="Allnav" id="navbar" >
+  <div class="upper-nav">
+    <div class="container">
+      <div class="head-container">
+        <div class="left-nav">
+          <span class="toggle-sidebar-icon" 
+          style="padding-right: 50px;"
+          (click)="onToggleSidebar()"
+          [class.open]="isSidebarOpen">
+          <i class="fa-solid fa-bars"></i>
+    </span>
+    
+    
+        <div class="phone"><i class="fa fa-phone"></i> +2 95 01 88 821</div>
+        <div class="email" style="margin-left: 10px"><i class="fa fa-envelope"></i> info&#64;domain.com</div>
+      </div>
+
+    
+
+      <div class="right-nav">
+        <i class="fa-brands fa-facebook-f "></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-google"></i>
+        <i class="fa-brands fa-linkedin"></i>
+        
+       </div>
+    </div>
+  </div>
+</div>
+
+<div class="navbar">
+
+  <div class="container">
+    <div class="col-sm-4">
+    <div class="navbarleft">
+      <div>
+        <img routerLink="/" src="../../../assets/Images/logo.png" alt="logo" />
+      </div>
+      <div class="select-wrap">
+
+        <select>
+          <option value="" selected>USA</option>
+          <option value="Canda">Canda</option>
+          <option value="UK">UK</option>
+        </select>
+
+        <select>
+          <option value="Dollar" selected>DOLLAR</option>
+          <option value="Canda">Canda</option>
+          <option value="UK">UK</option>
+        </select>
+        
+         
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-8">
+    <div class="navrbaright">
+      <ul>
+        <li> 
+          <a routerLink="/UserRegister" routerLinkActive="active" [hidden]="isLogged" class="nbar"><i class="fa fa-user"></i>
+            <span style="margin-left:5px ;">
+              Register
+            </span></a>
+        </li>
+        <li> 
+          <a routerLink="/UserLogin" routerLinkActive="active" [hidden]="!isLogged" class="nbar"><i class="fa fa-user"></i>
+            <span style="margin-left:5px ;">
+              logout
+            </span></a>
+        </li>
+        <li> 
+          <a routerLink="/UserLogin" routerLinkActive="active" [hidden]="isLogged" class="nbar"><i class="fa fa-user"></i>
+            <span style="margin-left:5px ;">
+             Login
+            </span></a>
+        </li>
+       
+        <li> 
+          <a routerLink="/profile" routerLinkActive="active" class="nbar"><i class="fa fa-user"></i>
+            <span style="margin-left:5px ;">
+              Profile
+            </span></a>
+        </li>
+
+        <li>
+          <a
+            class="nbar"
+            routerLink="/Checkout"
+            routerLinkActive="active"><i class="fa fa-crosshairs"></i>
+              <span style="margin-left:5px ;">
+                Checkout
+          </span>
+          </a>
+        </li>
+
+       
+        <li>
+          
+          <a routerLink="/Cart" routerLinkActive="active" class="nbar">
+             <div class="cart-icon">
+             
+                <i class="fa fa-shopping-cart"></i>
+                <span  class="cart-item-count">{{ selectedProduct.length }}</span>
+                <span style="margin-left:5px;">Cart</span>
+              </div>
+              </a>
+        
+        </li>
+        
+        
+        
+        <li>
+          <a routerLink="/Login" routerLinkActive="active" class="nbar"><i class="fa fa-lock"></i>
+            <span style="margin-left:5px ;">
+              Login
+            </span>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  </div>
+
+</div>
+
+</div> 
+<!-- nazl el div ele fo2 el satr da lel a5er lw 3aez tzher el secoundnavbar -->
+<br>
+
+<!-- <div class="secondNavBar">
+  <div class="container">
+    <div class="thirtNavBar">
+      <div class="secoundNavBarLeft">
+        <a href="">Home</a>
+        <a href="">404</a>
+        <a href="">Contact</a>
+      </div>
+
+      <div class="secoundNavBarRight">
+      <div class="search-container">
+        <input type="text" class="search-inp" placeholder="search" />
+
+      </div>
+    </div>
+    </div>
+  </div>
+</div> -->
+

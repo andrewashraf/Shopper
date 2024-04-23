@@ -1,0 +1,143 @@
+<app-header></app-header>
+<br>
+<br>
+<br>
+<div class="container">
+    <form [formGroup]="userRegisterForm" (ngSubmit)="submit()">
+      <div class="form-group">
+        <label for="fName" class="form-label">Full Name :</label>
+        <input type="text" formControlName="fullName" class="form-control" id="fName" name="fname"
+        [class.is-valid]="userRegisterForm.get('fullName')?.valid"
+        [class.is-invalid]="userRegisterForm.get('fullName')?.invalid"
+        >
+        <div *ngIf="userRegisterForm.get('fullName')?.invalid && userRegisterForm.get('fullName')?.touched" class="alert alert-warning" >
+          <small *ngIf="userRegisterForm.get('fullName')?.errors?.['required']">
+            Full Name Is required
+          </small>
+          <small *ngIf="userRegisterForm.get('fullName')?.errors?.['pattern']">
+            Full Name Must be at least 3 letters , ' <b> {{ userRegisterForm.get('fullName')?.value }} </b> ' doesnt match.
+          </small>
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="uEmail" class="form-label">Email:</label>
+        <input type="email" formControlName="email" class="form-control" id="uEmail" name="useremail"
+               [class.is-valid]="userRegisterForm.get('email')?.valid"
+               [class.is-invalid]="userRegisterForm.get('email')?.invalid">
+        <div *ngIf="userRegisterForm.get('email')?.invalid && userRegisterForm.get('email')?.touched" class="alert alert-warning">
+          <small *ngIf="userRegisterForm.get('email')?.errors?.['required']">
+            Email is required
+          </small>
+          <small *ngIf="userRegisterForm.get('email')?.errors?.['email']">
+            Please enter a valid email address
+          </small>
+        </div>
+      </div>
+<br>
+        <div formArrayName="phoneNo">
+            <div class="mb-3 ms-3" *ngFor="let phoneNo of phoneNumbers.controls; let i=index">
+              <label for="{{'uPhone-' + i}}" class="form-label">Phone Number: #{{i+1}}</label>
+              <input type="text" [formControlName]="i" class="form-control" id="{{'uPhone-' + i}}" name="userphone">
+              <button type="button" class="btn btn-success" (click)="addPhoneNo($event)"> + </button>
+            </div>   
+          </div>
+          
+        
+      
+        <div formGroupName="address">
+
+            <div class="mb-3">
+                <label for="Fname" class="form-label">City :</label>
+                <input type="text" formControlName="city" class="form-control" id="uCity" name="usercity" >
+            </div>
+            <div class="mb-3">
+                <label for="Fname" class="form-label">Postal Code :</label>
+                <input type="text" formControlName="postalCode" class="form-control" id="uPostalCode" name="userpostalcode" >
+            </div>
+            <div class="mb-3">
+                <label for="Fname" class="form-label">Street :</label>
+                <input type="text" formControlName="street" class="form-control" id="uStreet" name="userstreet" >
+            </div>
+        </div>
+<!-- bootstrap radio form check  -->
+
+<div class="form-check">
+    <input formArrayName="referral" name="referral" class="form-check-input" type="radio"  id="gridRadios1" value="option1" checked >
+    <label class="form-check-label" for="gridRadios1">
+      Social Media
+    </label>
+  </div>
+  <div class="form-check">
+    <input formArrayName="referral" name="referral" class="form-check-input" type="radio"  id="gridRadios2" value="option2" >
+    <label class="form-check-label" for="gridRadios2">
+      friend
+    </label>
+  </div>
+  <div class="form-check">
+    <input formArrayName="referralOther" name="referral" class="form-check-input" type="radio"  id="gridRadios3" value="option3" > 
+    <!-- (change)="updateReferralValidators($event)" -->
+    <label class="form-check-label" for="gridRadios3">
+      Other
+    </label>
+  </div>
+  <div class="mb-3 ms-3" *ngIf="userRegisterForm.get('referral')?.value=='other'">
+    <label for="Other" class="form-label">Specify</label>
+    <input type="text" formControlName="referralOther" class="form-control" id="rOther" name="refOther" > 
+  </div>
+
+
+
+
+<!-- cross field validation for password -->
+<div class="mb-3">
+  <label for="Upass" class="form-label">Password:</label>
+  <input type="password" formControlName="password" class="form-control" id="uPassword" name="userpassword" #assignPassword>
+  <div *ngIf="password?.errors?.['required'] && password?.touched" class="alert alert-warning">
+    Password is required
+  </div>
+  <div *ngIf="password?.errors?.['passwordComplexity'] && password?.touched" class="alert alert-warning">
+    Password must contain at least 5 characters including one number
+  </div>
+</div>
+<div class="mb-3">
+  <label for="UCPass" class="form-label">Confirm Password:</label>
+  <input type="password" formControlName="ConfirmPassword" class="form-control" id="uCPassword" name="usercpassword" [pattern]="assignPassword.value">
+  <small *ngIf="userRegisterForm.get('ConfirmPassword')?.errors?.['pattern']">not the same</small>
+  <div *ngIf="confirmPassword?.errors?.['required'] && confirmPassword?.touched" class="alert alert-warning">
+    Confirm Password is required
+  </div>
+  <div *ngIf="confirmPassword?.errors?.['passwordMismatch']" class="alert alert-warning">
+    Confirm password must match password
+  </div>
+  
+</div>
+
+
+    
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button [disabled]="userRegisterForm.invalid" type="submit" class="btn btn-primary"data-bs-dismiss="modal">
+            Save
+            </button>
+          </div>  
+        </form>
+
+        <hr>
+        <div class="text-danger">
+            
+                <!-- ele ta7tha asahal 3ashan fel .ts 3amlna function fullname -->
+                 <!-- <div>
+                {{ userRegisterForm.get('fullName')?.errors | json }}
+            </div> -->
+            <div>
+                {{ fullName?.errors | json }}
+            </div>
+            <div>
+                {{userRegisterForm.value| json }}
+            </div>
+        </div>
+        <!-- in case of edit profile -->
+        <button type="button" class="btn btn-secondary" (click)="fillform()">Fill Form</button>
+    
+</div>

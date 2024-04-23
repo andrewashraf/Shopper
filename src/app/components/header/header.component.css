@@ -1,0 +1,336 @@
+/*************************
+*******Header CSS******
+**************************/
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
+@import url(http://fonts.googleapis.com/css?family=Abel);
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    position: relative;
+    font-weight: 400px;
+}
+
+.Allnav {
+    border-bottom: 1px solid #F0F0E9;
+    position: fixed;
+    width: 100%;
+    background: white;
+    z-index: 9999999;
+    top: 0;
+    transition: top 0.3s ease; /* Add transition for smooth movement */
+}
+
+
+  .hide {
+    top: -100px; /* Move the header up */
+  }
+
+.main-content {
+    padding-top: 60px; /* Adjust this value based on the height of your navbar */
+}
+
+.header_top {
+    background: none repeat scroll 0 0 #F0F0E9;
+}
+
+.left-nav span {
+    cursor: pointer;
+    font-size: 20px;
+    transition: color 0.3s; /* Add transition for color change */
+}
+
+.left-nav span:hover {
+    color: #FE980F;
+}
+
+
+/* me */
+.upper-nav {
+    background-color: #F0F0E9;
+}
+
+.head-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.left-nav {
+    display: flex;
+    padding: 10px;
+    font-size: 12px;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+}
+
+.right-nav {
+    display: flex;
+    padding: 7px;
+    align-items: center;
+}
+
+.right-nav i{
+    color: #696763;
+    font-size: 18px; /* Adjust the size as needed */
+    padding: 7px 14px;
+  margin-right: 10px; /* Adjust spacing between icons */
+  transition: color 0.5s ease; /* Smooth transition for color change */
+    
+}
+
+/* Facebook */
+.right-nav .fa-facebook-f:hover {
+    color: #0a57e7; /* Facebook blue */
+  }
+  
+  /* Twitter */
+  .right-nav .fa-twitter:hover {
+    color: #1da1f2; /* Twitter blue */
+  }
+  
+  /* LinkedIn */
+  .right-nav .fa-linkedin:hover {
+    color: #0077b5; /* LinkedIn blue */
+  }
+  
+  /* Gmail */
+  .right-nav .fa-google:hover {
+    color: #dd4b39; /* Google red */
+  }
+
+.navrbaright ul {
+    display: flex;
+    /* gap: 10%; */
+    list-style: none;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    /* padding-right: 280px; */
+}
+
+.navbarright {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+
+}
+.carousel-indicators li.active {
+    background: #FE980F;
+}
+
+.navbarleft {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+
+
+}
+
+.select-wrap {
+    margin-left: 10px;
+}
+
+
+.nbar {
+    display: flex;
+    text-decoration: none;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+
+}
+.nbar ul li {
+    display:inline-block;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+    border-bottom: 1px solid #F0F0E9;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+.secoundNavBarLeft {
+
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    display: flex;
+    gap: 50%;
+    align-items: center;
+    /* padding: 20px; */
+   
+    list-style: none;
+
+}
+.secoundNavBarLeft .navbarright span,a:hover{
+    background:none;
+	color:#fdb45e ;
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+
+}
+
+
+.secoundNavBarLeft a {
+
+    
+    text-decoration: none !important;
+    
+    color: #696763 !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    font-weight: 300;
+    padding: 0;
+    padding-bottom: 10px;
+}
+.secoundNavBarLeft a :hover {
+
+    text-decoration: none !important;
+    color: #FE980F !important;
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+}
+
+.search-container {
+    background-color: #F0F0E9;
+    height: fit-content;
+}
+
+.search-inp {
+
+
+    background: #F0F0E9;
+    border: medium none;
+    color: #B2B2B2;
+    font-family: 'roboto';
+    font-size: 12px;
+    font-weight: 300;
+    height: 35px;
+    outline: medium none;
+    padding-left: 10px;
+    width: 155px;
+    background-image: url(../../../assets/Images/searchicon.png);
+    background-repeat: no-repeat;
+    background-position: 130px;
+}
+
+.search-inp:focus-visible {
+    outline: none !important;
+    border: none !important;
+}
+
+.fa-magnifying-glass{
+    background: #F0F0E9;
+    color: #B2B2B2;
+    font-size: 12px;
+    padding-right: 15px;
+}
+.navbar-collapse.collapse {
+    padding-left: 0;
+}
+.thirtNavBar {
+    display: flex;
+    justify-content: space-between;
+    
+    margin: 10px;
+}
+
+.select-wrap select {
+    /* el loon msh rady yt3'ar */
+
+    position: relative;
+    float: left;
+    border-radius: 0;
+    color: #B4B1AB;
+    font-size: 12px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 2px 15px;
+    margin-top: 10px;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+
+/* navbar  */
+.navbar-header .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-toggle {
+    background-color: #000;
+}
+
+.navbar-collapse.collapse {
+    padding-left: 0;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.nav.navbar-nav>li:hover>ul.sub-menu {
+    display: block;
+    -webkit-animation: fadeInUp 400ms;
+    -moz-animation: fadeInUp 400ms;
+    -ms-animation: fadeInUp 400ms;
+    -o-animation: fadeInUp 400ms;
+    animation: fadeInUp 400ms;
+}
+
+
+.navbar-nav li ul.sub-menu li {
+    padding: 10px 20px 0;
+}
+
+.navbar-nav li ul.sub-menu li:last-child {
+    padding-bottom: 20px;
+}
+
+.navbar-nav li ul.sub-menu li a {
+    color: #fff;
+}
+
+.navbar-nav li ul.sub-menu li a:hover {
+    color: #FDB45E;
+    -webkit-transition: all linear .2s;
+    transition: all linear .2s;
+}
+
+
+.cart-icon {
+    position: relative; /* Set position to relative for absolute positioning of the count */
+    display: inline-block;
+}
+
+.cart-item-count {
+    position: absolute;
+    top: -20px;
+    left: -1px;
+    color: #FE980F;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: 800;
+
+}
+
+

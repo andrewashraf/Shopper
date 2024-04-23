@@ -1,0 +1,130 @@
+.category-tab {
+    overflow: hidden;
+}
+
+.shop-details-tab .col-sm-12 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.category-tab ul {
+    
+    background: #40403E;
+    border-bottom: 1px solid #FE980F;
+    list-style: none outside none;
+    /* margin: 0 0 30px; */
+    padding: 10px;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.category-tab ul li a {
+    
+    margin: 0 20px;
+    border-radius: 0;
+    color: #B3AFA8;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    
+
+}
+
+.category-tab ul li a:hover {
+    /* background: #FE980F; */
+    color: #FE980F;
+    text-decoration: none;
+}
+
+.category-tab.navnav.nav-tabs li.active a,
+.category-tab.navnav.nav-tabs li.active a:hover,
+.category-tab.navnav.nav-tabs li.active a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #FE980F;
+    border: 0px;
+    color: #FFFFFF;
+    cursor: default;
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.category-tab img {
+    height: 300px;
+}
+
+.nav-tabs li a {
+    border: 1px solid rgba(0, 0, 0, 0);
+    border-radius: 4px 4px 0 0;
+    line-height: 1.42857;
+    margin-right: 0;
+}
+.nav-tabs{
+    
+    display: flex;
+    justify-content: space-between;
+    
+
+}
+.nav-tabs li.active a {
+    background-color: #FE980F; /* Change this color to your desired active tab color */
+    color: #40403E !important; /* Change this color to your desired active tab text color */
+  }
+
+  .product-image-wrapper {
+    border: 1px solid #F7F7F5;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.single-products {
+    position: relative;
+}
+
+.single-products:hover .product-overlay {
+    display: block;
+    height: 100%;
+}
+.shipping.text-center{
+    padding: 10px;
+}
+.features_items ,.col-sm-9-padding-right, .title-text-center h2{
+
+    color: #FE980F;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 10px ;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+}
+.text-center p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #696763;
+    text-transform: capitalize;
+}
+.add-to-cart {
+    background: #F5F5ED;
+    border: 0 none;
+    border-radius: 0;
+    color: #696763;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    margin-bottom: 25px;
+    text-transform: lowercase;
+    border-radius: 50rem !important; 
+}
+
+/* .imgfortab{
+    border-radius: 50% !important;
+    border: 1px solid #dee2e6 !important;
+
+} */

@@ -21,7 +21,9 @@ body {
     top: 0;
     transition: top 0.3s ease; /* Add transition for smooth movement */
 }
-
+.logoweb{
+    width: 130px;
+}
 
   .hide {
     top: -100px; /* Move the header up */

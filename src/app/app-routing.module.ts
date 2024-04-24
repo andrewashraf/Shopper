@@ -15,6 +15,7 @@ import { UserRegisterComponent } from './components/user-register/user-register.
 import { ItemSingleComponent } from './components/item-single/item-single.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
 const routes: Routes = [
@@ -24,6 +25,7 @@ const routes: Routes = [
     {path:"home" , component:HomeComponent},
     {path:"Account" , component:AccountComponent,canActivate:[AuthGuard]},
     {path:"profile" , component:ProfileComponent,canActivate:[AuthGuard]},
+    {path:"dashboard" , component:DashboardComponent,canActivate:[AuthGuard]},
     {path:"Checkout" , component:CheckoutComponent,canActivate:[AuthGuard]},
     {path:"Login" , component:LoginComponent},
     {path:"UserLogin" , component:UserLoginComponent},

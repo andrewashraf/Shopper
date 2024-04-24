@@ -48,6 +48,7 @@
   import { CartComponent } from './components/cart/cart.component';
 import { UserLoginComponent } from './components/user-login/user-login.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
   @NgModule({
     declarations: [
@@ -77,7 +78,8 @@ import { ProfileComponent } from './components/profile/profile.component';
       SidebarComponent,
       ItemSingleComponent,
       CartComponent,
-      ProfileComponent
+      ProfileComponent,
+      DashboardComponent
       
       
     ],

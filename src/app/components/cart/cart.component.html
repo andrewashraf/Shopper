@@ -17,16 +17,35 @@
     </div>
   </div>
 
-  <a routerLink="/home" fragment="featureItems" class="routerFeature">Feature Items</a>
+  
+
+    <!-- Your other content here -->
+  
+    <!-- Total price section -->
+    <div class="total-price-fixed">
+      <h3 class="total-price-heading" style="color: #FE980F;">
+        Total Price to Pay:
+        <span style="color: #ffffff;">{{ ' ' + totalPrice | currency }}</span>
+      </h3>
+    </div>
+
+  
+
+
+
+  <a routerLink="/home" fragment="featureItems" class="routerFeature">Feature Items ' Home '</a>
+  <app-features-items></app-features-items>
+
+
+
+
   <a routerLink="/home" fragment="recommendedItems" class="routerFeature">Recommended Items</a>
+  <app-recommended-item></app-recommended-item>
 
 
 
-  <h3 class="total-price-heading mt-4" style="color: #696763;">
-    Total Price to Pay:
-    <span style="color: #FE980F;">{{ ' ' + totalPrice | currency }}</span>
-  </h3>
+</div>  
    
-</div>
+
 
 <app-footer></app-footer>

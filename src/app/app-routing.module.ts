@@ -21,8 +21,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 const routes: Routes = [
   {path:'', component:MainLayoutComponent,children:[
 
-    {path:"" , redirectTo:'/home',pathMatch:'full'}, // default path
-    {path:"home" , component:HomeComponent},
+    {path:'' , redirectTo:'/home',pathMatch:'full'}, // default path
+    {path:'home' , component:HomeComponent},
     {path:"Account" , component:AccountComponent,canActivate:[AuthGuard]},
     {path:"profile" , component:ProfileComponent,canActivate:[AuthGuard]},
     {path:"dashboard" , component:DashboardComponent,canActivate:[AuthGuard]},

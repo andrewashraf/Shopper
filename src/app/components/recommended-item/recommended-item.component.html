@@ -1,5 +1,7 @@
 <div class="container">
-  <h2 class="title text-center">Recommended Items</h2>
+  <div class="features_items">
+    <h2 class="title text-center" id="recommendedItems">Recommended Items</h2>
+
   <div class="card-container">
     <div class="row row-cols-1 row-cols-md-3 g-6" id="scrollContainer">
       <div class="col" *ngFor="let item of displayedItems; let i = index" [ngClass]="getAnimationClass(i)">

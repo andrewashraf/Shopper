@@ -1,10 +1,10 @@
-import { ChangeDetectorRef, Component, OnInit , ElementRef, HostListener} from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit , ElementRef, HostListener, ViewChild} from '@angular/core';
 
 import { MatDialog } from '@angular/material/dialog';
 import { SliderModule } from 'ngx-slider';
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ProductService } from 'src/app/services/product.service';
-import { ActivatedRoute } from '@angular/router'; // Import ActivatedRoute
+import { ActivatedRoute ,Router } from '@angular/router'; // Import ActivatedRoute
 
 
 @Component({
@@ -101,9 +101,10 @@ export class HomeComponent implements OnInit {
   
   spinnerColor = '#e40000';
 
+  
 
   constructor(public productService: ProductService, private cdr: ChangeDetectorRef , private elementRef: ElementRef,
-    private route: ActivatedRoute // Inject ActivatedRoute
+    private route: ActivatedRoute, private router:Router // Inject ActivatedRoute,
   ) {}
 
   ngOnInit() {
@@ -115,7 +116,14 @@ export class HomeComponent implements OnInit {
 
     this.startSlideShow();
 
-
+    this.route.fragment.subscribe(fragment => {
+      if (fragment) {
+        const element = document.getElementById(fragment);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
    
     
   

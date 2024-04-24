@@ -40,7 +40,7 @@ const routes: Routes = [
   {path:"Wishlist" , component:WishlistComponent,canActivate:[AuthGuard]},
   {path:"Wishlist/:pid" , component:ProductDetailsComponent},
   
-  //  {path:"**", component:NotFoundComponent} // wildcard path NFound
+   {path:"**", component:NotFoundComponent} // wildcard path NFound
   
 ];
 
